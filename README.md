@@ -67,9 +67,22 @@ Restaurar paquetes
 
 dotnet restore
 
+Aplicar migraciones porque ya existen
+
+cd Library.API
+
+dotnet restore
+
+dotnet ef database update --project ../Library.Infrastructure --startup-project .
+
+En caso te salga que no reconoce el dotnet ef , ejecuta este comando en cmd cómo administrador o en power shell :
+dotnet tool install --global dotnet-ef --version 8.0.0
+Vuelves a ejecutar
+dotnet ef database update --project ../Library.Infrastructure --startup-project .
+
 Ejecutar proyecto
 
-dotnet run --project Library.API
+dotnet run
 ```
 
 ### Opción C: Usando línea de comandos (Recomendado para visual studio code ejecutando las migraciones)
@@ -90,6 +103,15 @@ dotnet run
 4. Abrir navegador en (de acuerdo a la url que te indique): 
 http://localhost:5000 (Example)
 https://localhost:5001 (Example)
+
+```
+
+### Recordar que tienes que tener las credenciales de la base de datos correctamente puestas en el .env tal cual lo indica en la parte de arriba con los mismos nombres de las variables
+
+### En caso te salga que no es seguro localhost poner este comando en la carpeta raíz del proyecto
+
+```
+dotnet dev-certs https --trust
 ```
 
 ### Crear migraciones (si es necesario)
