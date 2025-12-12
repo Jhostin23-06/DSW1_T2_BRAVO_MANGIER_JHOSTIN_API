@@ -57,7 +57,6 @@ Presionar F5 o Ctrl+F5 para ejecutar
 ### Opción B: Usando Visual Studio Code
 
 ```
-
 Abrir carpeta en VS Code
 
 code .
@@ -71,7 +70,6 @@ dotnet restore
 Ejecutar proyecto
 
 dotnet run --project Library.API
-
 ```
 
 ### Opción C: Usando línea de comandos (Recomendado para visual studio code ejecutando las migraciones)
@@ -97,7 +95,6 @@ https://localhost:5001 (Example)
 ### Crear migraciones (si es necesario)
 
 ```
-
 Desde la carpeta Library.Infrastructure
 
 cd Library.Infrastructure
@@ -109,29 +106,7 @@ dotnet ef migrations add InitialCreate --startup-project ../Library.API
 Aplicar migración
 
 dotnet ef database update --startup-project ../Library.API
-
 ```
-
-## 🌐 Endpoints de la API
-
-### 📚 Libros
-Método	    Endpoint	                      Descripción
-  GET	      /api/books	                Listar todos los libros
-  GET	      /api/books/available	  Libros disponibles para préstamo
-  GET	      /api/books/{id}            	Obtener libro por ID
-  GET	      /api/books/isbn/{isbn}	   Obtener libro por ISBN
-  POST	    /api/books	                  Crear nuevo libro
-  PUT	      /api/books/{id}	              Actualizar libro
-  DELETE	  /api/books/{id}	                Eliminar libro
-### 📝 Préstamos
-Método	            Endpoint	                        Descripción
-GET	              /api/loans	                  Listar todos los préstamos
-GET	              /api/loans/active	                Préstamos activos
-GET	              /api/loans/student/{name}	      Préstamos por estudiante
-GET	              /api/loans/book/{id}	            Préstamos por libro
-POST	            /api/loans	                      Crear nuevo préstamo
-PUT	              /api/loans/{id}/return	           Devolver préstamo
-DELETE	          /api/loans/{id}	                  Eliminar préstamo
 
 
 ## 👥 Autores
