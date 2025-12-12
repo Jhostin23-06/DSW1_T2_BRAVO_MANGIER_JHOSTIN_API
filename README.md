@@ -57,14 +57,17 @@ Presionar F5 o Ctrl+F5 para ejecutar
 ### Opción B: Usando Visual Studio Code
 
 Abrir carpeta en VS Code
+
 code .
 
 Abrir terminal integrada (Ctrl + `)
 
 Restaurar paquetes
+
 dotnet restore
 
 Ejecutar proyecto
+
 dotnet run --project Library.API
 
 ### Opción C: Usando línea de comandos (Recomendado para visual studio code ejecutando las migraciones)
@@ -90,9 +93,11 @@ https://localhost:5001 (Example)
 ### Crear migraciones (si es necesario)
 
 Desde la carpeta Library.Infrastructure
+
 cd Library.Infrastructure
 
 Crear nueva migración
+
 dotnet ef migrations add InitialCreate --startup-project ../Library.API
 
 Aplicar migración
@@ -120,5 +125,15 @@ PUT	              /api/loans/{id}/return	           Devolver préstamo
 DELETE	          /api/loans/{id}	                  Eliminar préstamo
 
 
+## 👥 Autores
 
+Jhostin Bravo Mangier
+
+Curso: Desarrollo de Servicios Web I
+
+Universidad: Universidad Tecnológica del Perú
+
+## 📄 Licencia
+
+Este proyecto es para fines educativos como parte de la evaluación T2 del curso DSW1.
 
