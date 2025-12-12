@@ -56,6 +56,8 @@ Presionar F5 o Ctrl+F5 para ejecutar
 
 ### Opción B: Usando Visual Studio Code
 
+```
+
 Abrir carpeta en VS Code
 
 code .
@@ -69,6 +71,8 @@ dotnet restore
 Ejecutar proyecto
 
 dotnet run --project Library.API
+
+```
 
 ### Opción C: Usando línea de comandos (Recomendado para visual studio code ejecutando las migraciones)
 
@@ -92,6 +96,8 @@ https://localhost:5001 (Example)
 
 ### Crear migraciones (si es necesario)
 
+```
+
 Desde la carpeta Library.Infrastructure
 
 cd Library.Infrastructure
@@ -101,7 +107,10 @@ Crear nueva migración
 dotnet ef migrations add InitialCreate --startup-project ../Library.API
 
 Aplicar migración
+
 dotnet ef database update --startup-project ../Library.API
+
+```
 
 ## 🌐 Endpoints de la API
 
@@ -131,7 +140,7 @@ Jhostin Bravo Mangier
 
 Curso: Desarrollo de Servicios Web I
 
-Universidad: Universidad Tecnológica del Perú
+Cibertec
 
 ## 📄 Licencia
 
